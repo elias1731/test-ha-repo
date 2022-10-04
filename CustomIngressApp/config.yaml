@@ -1,8 +1,8 @@
 ---
-name: Ingress proxy
-version: 0.2.0
+name: ELIAS1731 Custom Ingress App
+version: dev
 slug: ingress_proxy
-description: nginx reverse proxy to expose network resources through HA ingress
+description: "Simple tool to get YOUR page implemented in HA"
 webui: "[PROTO:ssl]://[HOST]:[PORT:80]"
 init: false
 ingress: true
