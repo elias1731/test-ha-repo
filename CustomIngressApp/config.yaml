@@ -1,6 +1,6 @@
 ---
 name: ELIAS1731 Custom Ingress App
-version: dev
+version: 0.2.0
 slug: ingress_proxy
 description: "Simple tool to get YOUR page implemented in HA"
 webui: "[PROTO:ssl]://[HOST]:[PORT:80]"
