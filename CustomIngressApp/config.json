@@ -1,0 +1,18 @@
+{
+    "name": "Hello Angular Addon",
+    "version": "dev",
+    "slug": "helloangularaddon",
+    "description": "Simple Angular Hello-World behind nginx ingress",
+    "url": "https://github.com/albertogeniola/test-addon-ingress",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "application",
+    "boot": "auto",
+    "ports": {},
+    "ports_description": {
+  "6066/tcp": "Website HTTP/S Port"},
+    "host_network": false,
+    "ingress": true,
+    "ingress_ports": {
+    "6066/tcp": null
+  }
+}
