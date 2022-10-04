@@ -11,8 +11,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 RUN \
     apk add --no-cache --virtual A03-test \
-        git=latest \
-        nginx=latest  \
+        git \
+        nginx  \
     && rm -fr \
         /tmp/* \
         /etc/nginx
