@@ -1,5 +1,8 @@
-#ORIGINAL README:
+##ELIAS1731 CustomIngreesApp | Based on the Add-on down below.
 ---
+
+>ORIGINAL README:
+
 ## Hello Angular Addon
 
 Simple Addon showcasing an Angular app behind nginx proxy 

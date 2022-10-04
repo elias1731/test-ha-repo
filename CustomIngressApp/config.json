@@ -1,15 +1,15 @@
 {
-    "name": "Hello Angular Addon",
+    "name": "ELIAS1731 Custom Ingress App",
     "version": "dev",
-    "slug": "helloangularaddon",
-    "description": "Simple Angular Hello-World behind nginx ingress",
-    "url": "https://github.com/albertogeniola/test-addon-ingress",
+    "slug": "customingress-test",
+    "description": "Simple tool to get YOUR page implemented in HA",
+    "url": "https://github.com/elias1731/elias-custom-ha-repo",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "startup": "application",
     "boot": "auto",
     "ports": {},
     "ports_description": {
-  "6066/tcp": "Website HTTP/S Port"},
+  "6066/tcp": "HTTP/S Port der Website"},
     "host_network": false,
     "ingress": true,
     "ingress_ports": {
