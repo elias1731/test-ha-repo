@@ -1,21 +1,15 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.1.6
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
-
-# Set workdir
-WORKDIR /opt
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
+# hadolint ignore=DL3003
 RUN \
-    apk add --no-cache --virtual A03-test \
-        git \
-        nginx  \
-    && rm -fr \
-        /tmp/* \
-        /etc/nginx
+    apk add --no-cache \
+        nginx=1.22.0-r1
 
 # Copy root filesystem
 COPY rootfs /
@@ -43,6 +37,9 @@ LABEL \
     org.opencontainers.image.vendor="ELIAS1731 Custom Add-ons" \
     org.opencontainers.image.authors="Alberto Geniola <albertogeniola@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://addons.community" \
+    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \	
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}

@@ -1,25 +1,20 @@
-arch:
-- aarch64
-- amd64
-- armhf
-- armv7
-- i386
-description: "Simple tool to get YOUR page implemented in HA"
-hassio_api: true
-image: elias1731/elias-custom-ha-repo/CustomIngressApp
-boot: auto
-startup: application
+---
+name: Ingress proxy
+version: 0.2.0
+slug: ingress_proxy
+description: nginx reverse proxy to expose network resources through HA ingress
+webui: "[PROTO:ssl]://[HOST]:[PORT:80]"
+init: false
 ingress: true
-name: ELIAS1731 Custom Ingress App
-ports:
-  6067/tcp: 0
-  6068/tcp: 0
-ports_description:
-  6067/tcp: PORT 2
-  6068/tcp: PORT 3
-ingress_ports:
-  6066/tcp: 0
-slug: customingress-test
-url: https://github.com/elias1731/elias-custom-ha-repo/
-version: dev
-webui: http://[HOST]:[PORT:6069]
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+map:
+  - ssl
+options:
+  destination: "http://192.168.0.1"
+schema:
+  destination: str?
