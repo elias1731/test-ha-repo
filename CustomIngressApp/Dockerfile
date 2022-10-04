@@ -1,5 +1,5 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.1.6
- hadolint ignore=DL3006
+# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Set workdir
@@ -10,7 +10,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
 RUN \
-    apk add --no-cache \
+    apk add --no-cache --virtual A03-test \
         git=2.30.2-r0 \
         nginx=1.18.0-r13  \
     && rm -fr \
